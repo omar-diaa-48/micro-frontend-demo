@@ -1,5 +1,18 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './style.css';
 
-createApp(App).mount('#app')
+const mount = (el: HTMLDivElement) => {
+    const app = createApp(App);
+    app.mount(el);
+}
+
+if (process.env.NODE_ENV === 'development') {
+    const devRoot = document.querySelector<HTMLDivElement>('#_landing-dev-root')
+
+    if (devRoot) {
+        mount(devRoot)
+    }
+}
+
+export { mount };
