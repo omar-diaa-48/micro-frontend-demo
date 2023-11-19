@@ -1,1 +1,1 @@
-declare module "landing/LandingApp";
+declare module "landing/*";

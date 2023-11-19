@@ -6,14 +6,14 @@ import packageJson from './package.json';
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 3000
+    port: 8000
   },
   plugins: [
     react(),
     federation({
       name: 'container',
       remotes: {
-        'landing': 'landing@http://localhost:3001/remoteEntry.js'
+        'landing': 'landing@http://localhost:8001/remoteEntry.js'
       },
       shared: packageJson.dependencies
     })
