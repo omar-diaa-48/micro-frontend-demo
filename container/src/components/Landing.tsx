@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { mount } from "landing/Landing"
+import { mount } from "landing/LandingApp"
 
 export default () => {
     const ref = useRef(null)

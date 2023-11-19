@@ -14,9 +14,9 @@ export default defineConfig({
       name: 'landing',
       filename: 'remoteEntry.js',
       exposes: {
-        './Landing': './src/main.ts'
+        './LandingApp': './src/main.ts'
       },
-      shared: [packageJson.dependencies]
+      shared: packageJson.dependencies
     })
   ],
 })
