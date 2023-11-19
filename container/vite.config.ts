@@ -13,7 +13,7 @@ export default defineConfig({
     federation({
       name: 'container',
       remotes: {
-        'LandingApp': 'http://localhost:3001/remoteEntry.js'
+        'landing': 'http://localhost:3001/remoteEntry.js'
       },
       shared: [packageJson.dependencies]
     })
