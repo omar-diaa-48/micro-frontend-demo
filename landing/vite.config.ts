@@ -5,18 +5,23 @@ import packageJson from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false
+  },
   server: {
     port: 8001
   },
   plugins: [
-    vue(),
     federation({
-      name: 'landing',
+      name: 'landing-project',
       filename: 'remoteEntry.js',
       exposes: {
-        './LandingApp': './src/main.ts'
+        'LandingApp': './src/main.ts'
       },
       shared: packageJson.dependencies
-    })
+    }),
+    vue(),
   ],
 })

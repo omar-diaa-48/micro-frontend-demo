@@ -5,17 +5,22 @@ import packageJson from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false
+  },
   server: {
     port: 8000
   },
   plugins: [
-    react(),
     federation({
-      name: 'container',
+      name: 'container-project',
       remotes: {
-        'landing': 'landing@http://localhost:8001/remoteEntry.js'
+        'landing': 'landing-project@http://localhost:8001/assets/remoteEntry.js'
       },
       shared: packageJson.dependencies
-    })
+    }),
+    react(),
   ],
 })
