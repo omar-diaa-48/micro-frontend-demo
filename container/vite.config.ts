@@ -5,6 +5,7 @@ import packageJson from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: 'dist',
   build: {
     target: 'esnext',
     minify: false,
@@ -17,7 +18,7 @@ export default defineConfig({
     federation({
       name: 'container-project',
       remotes: {
-        'landing': 'http://localhost:8001/dist/assets/remoteEntry.js'
+        'landing': 'http://localhost:8001/assets/remoteEntry.js'
       },
       shared: packageJson.dependencies
     }),

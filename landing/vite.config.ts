@@ -5,6 +5,7 @@ import packageJson from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: 'dist',
   build: {
     target: 'esnext',
     minify: false,
