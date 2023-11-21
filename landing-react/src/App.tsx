@@ -2,7 +2,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="container">This is from react</div>
+    <div className="container">This is from remote react</div>
   )
 }
 

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container">This is from vue</div>
+  <div class="container">This is from remote vue</div>
 </template>
 
 <style scoped>

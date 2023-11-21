@@ -1,1 +1,2 @@
-declare module "landing/*";
+declare module "landing-vue/*";
+declare module "landing-react/*";

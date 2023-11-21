@@ -1,13 +1,15 @@
 import { lazy } from 'react'
 import './App.css'
 
-const LazyLanding = lazy(() => import("./components/Landing"))
+const LazyVueLanding = lazy(() => import("./components/LandingVue"))
+const LazyReactLanding = lazy(() => import("./components/LandingReact"))
 
 function App() {
   return (
     <div className="container" >
-      <p>This is container react app</p>
-      <LazyLanding />
+      <p>This is from container react</p>
+      <LazyVueLanding />
+      <LazyReactLanding />
     </div>
   )
 }
