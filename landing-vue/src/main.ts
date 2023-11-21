@@ -8,7 +8,7 @@ const mount = (el: HTMLDivElement) => {
 }
 
 if (process.env.NODE_ENV === 'development') {
-    const devRoot = document.querySelector<HTMLDivElement>('#_landing-dev-root')
+    const devRoot = document.querySelector<HTMLDivElement>('#_landing-vue-dev-root')
 
     if (devRoot) {
         mount(devRoot)
@@ -16,3 +16,4 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export { mount };
+

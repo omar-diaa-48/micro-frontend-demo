@@ -3,8 +3,20 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const mount = (el: HTMLDivElement) => {
+  ReactDOM.createRoot(el).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  )
+}
+
+if (process.env.NODE_ENV === 'development') {
+  const devRoot = document.querySelector<HTMLDivElement>('#_landing-react-dev-root')
+
+  if (devRoot) {
+    mount(devRoot)
+  }
+}
+
+export { mount };

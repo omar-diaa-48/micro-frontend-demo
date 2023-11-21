@@ -16,7 +16,7 @@ export default defineConfig({
   },
   plugins: [
     federation({
-      name: 'landing-project',
+      name: 'landing-vue-project',
       filename: 'remoteEntry.js',
       exposes: {
         './LandingApp': './src/main.ts'
