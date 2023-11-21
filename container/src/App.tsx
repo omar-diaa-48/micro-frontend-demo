@@ -5,8 +5,8 @@ const LazyLanding = lazy(() => import("./components/Landing"))
 
 function App() {
   return (
-    <div>
-      <p>Container App</p>
+    <div className="container" >
+      <p>This is container react app</p>
       <LazyLanding />
     </div>
   )
