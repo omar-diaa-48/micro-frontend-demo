@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent } from 'vue';
+
+// import HelloWorld from './components/HelloWorld.vue'
+const HelloWorld = defineAsyncComponent(() => import("./components/HelloWorld.vue"));
 </script>
 
 <template>

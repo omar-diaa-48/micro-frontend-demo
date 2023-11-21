@@ -1,9 +1,9 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp, defineAsyncComponent } from 'vue';
+// import App from './App.vue';
 import './style.css';
 
 const mount = (el: HTMLDivElement) => {
-    const app = createApp(App);
+    const app = createApp(defineAsyncComponent(() => import('./App.vue')));
     app.mount(el);
 }
 

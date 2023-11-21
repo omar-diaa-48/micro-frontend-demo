@@ -17,7 +17,7 @@ export default defineConfig({
     federation({
       name: 'container-project',
       remotes: {
-        'landing': 'landing-project@http://localhost:8001/assets/remoteEntry.js'
+        'landing': 'http://localhost:8001/dist/assets/remoteEntry.js'
       },
       shared: packageJson.dependencies
     }),
